@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<title>
+			JaxSnow Development
+		</title>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<a class="nav-link" href="#welcome-section">About Me</a>
+			<a class="nav-link" href="#projects">Projects</a>
+			<a class="nav-link" href="#other-links">Links</a>
+		</nav>
+
+		<header id="welcome-section">
+			<div id="company-logo">
+				<svg width="100%" height="100%" id="logo-bg">
+					<defs>
+						<radialGradient id="bg-gradient-final" >
+							<stop offset="0%" id="bg-grad-final-0" />
+							<stop offset="8%" id="bg-grad-final-8" />
+							<stop offset="100%" id="bg-grad-final-100" />
+						</radialGradient>
+					</defs>
+					<circle id="bg-circle" cx="12.5%" cy="10%" r="0" fill="url(#bg-gradient-final)">
+						<animate attributeName="r" from="0" to="1000" dur="2s" fill="freeze" />
+					</circle>
+				</svg>
+				<svg width="100%" height="100%" id="central-pic" viewBox="100 150 550 575">
+					<defs>
+						<filter id="binary-cross">
+							<feTurbulence baseFrequency="0.02" result="noise" />
+							<feColorMatrix in="noise" type="luminanceToAlpha" result="map" />
+							<feDisplacementMap in="SourceGraphic" in2="map" scale="10" result="bc" />
+							<feOffset dx="3" dy="3" />
+							<feGaussianBlur stdDeviation="5" result="ds" />
+							<feMerge>
+								<feMergeNode in="ds" />
+								<feMergeNode in="bc" />
+							</feMerge>
+						</filter>
+
+						<clipPath id="cross">
+							<polygon points="325,100 425,100 425,275 550,275 550,375 425,375 425,900 325,900 325,375 200,375 200,275 325,275 z" />
+						</clipPath>
+
+						<mask id="cross-hide-rings-left">
+							<rect x="0" y="0" width="750" height="1000" fill="white" />
+							<rect x="250" y="275" width="75" height="100" fill="black" />
+						</mask>
+
+						<mask id="cross-hide-rings-right">
+							<rect x="0" y="0" width="750" height="1000" fill="white" />
+							<rect x="425" y="275" width="75" height="100" transform="rotate(-9 375 325)" fill="black" />
+							<path
+								stroke="black"
+								stroke-width="15"
+								fill="white"
+								d="M 380 325
+								A 55 60 0 0 0 325 265"
+								transform="rotate(-9 375 325)" />
+						</mask>
+
+						<linearGradient id="left-ring-gradient" gradientUnits="objectBoundingBox" spreadMethod="reflect" x1="-15%" y1="20%" x2="-30%" y2="-15%" mask="url(#cross-hide-rings-left) url(#cross-hide-rings-right)">
+							<stop offset="0%" id="left-stop-0"  />
+							<stop offset="20%" id="left-stop-20" />
+						</linearGradient>
+
+						<linearGradient id="right-ring-gradient" gradientUnits="objectBoundingBox" spreadMethod="reflect" x1="-15%" y1="20%" x2="-30%" y2="-15%" mask="url(#cross-hide-rings-left) url(#cross-hide-rings-right)">
+							<stop offset="0%" id="right-stop-0"  />
+							<stop offset="20%" id="right-stop-20" />
+						</linearGradient>
+
+						<filter id="ring-lighting">
+							<feTurbulence baseFrequency="0.01" type="turbulence" result="ring-noise"/>
+							<feDisplacementMap in="SourceGraphic" in2="ring-noise" scale="40" result="shine-map" />
+							<feComposite in="SourceGraphic" in2="shine-map" operator="in" result="clipped-shine-map" />
+							<feBlend in="SourceGraphic" in2="clipped-shine-map" mode="color-burn" result="camo-map" />
+							<feGaussianBlur in="camo-map" stdDeviation="5" result="gaussian" />
+							<feComposite in="gaussian" in2="SourceGraphic" operator="in" result="blurred-map" />
+							<feBlend in="SourceGraphic" in2="blurred-map" mode="color-burn" result="ready-for-light" />
+						</filter>
+					</defs>
+
+					<g id="total">
+						<text id="cross-binary" class="binary" y="1em" lengthAdjust="spacingAndGlyphs" textLength="100%" clip-path="url(#cross)" filter="url(#composite)"> 
+							010010010010000001100011011000010110111000100000011001000110111100100000011000010110110001101100001000000111010001101000011010010110111001100111011100110010000001110100011010000111001001101111011101010110011101101000001000000100001101101000011100100110100101110011011101000010000001110111011010000110111100100000011100110111010001110010011001010110111001100111011101000110100001100101011011100111001100100000011011010110010100101110
+							<animate attributeName="textLength" from="10000%" to="100%" dur="3s" fill="freeze" />
+							<animate attributeName="font-size" from="0" to="80%" dur="3s" fill="freeze" />
+							<animate attributeName="y" from="1rem" to="1em" dur="3s" fill="freeze" />
+						</text>
+
+						<g id="rings">
+							<ellipse id="left-ring" cx="325" cy="325" rx="55" ry="60" mask="url(#cross-hide-rings-left)" stroke="url(#left-ring-gradient)" filter="url(#ring-lighting)" opacity="0">
+								<animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze" begin="3s" />
+							</ellipse>
+							<ellipse id="right-ring" cx="425" cy="318" rx="57.5" ry="59" transform="rotate(9 375 325)" mask="url(#cross-hide-rings-right)" stroke="url(#right-ring-gradient)" filter="url(#ring-lighting)" opacity="0">
+								<animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze" begin="3s" />
+							</ellipse>
+						</g>						
+					</g>
+
+				</svg>
+
+				<div id="company-id">
+					<h1 id="company-name">
+						JaxSnow Development
+					</h1>
+					<h2 id="company-slogan">
+						Faith ◘ Family ◘ Function
+					</h2>
+					<p>
+						<a href="mailto:JaxSnowDevelopment@gmail.com" id="email">JaxSnowDevelopment@gmail.com</a>
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<h1 class="section-header">
+				About Me
+				<hr>
+			</h1>
+			<p id="self-description">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, id, rem, eos alias in tempora asperiores provident animi dolor illo quasi nihil? Nam maxime laborum dolore illo quae exercitationem fugit optio, a quos, blanditiis modi dolorem natus, molestiae rerum doloribus tenetur sapiente non. Modi corrupti quis nisi odit, numquam sed.
+			</p>
+			
+			<h1 class="section-header">
+				Projects
+				<hr>
+			</h1>
+			<div id="projects">
+				<div class="project-tile">
+					<a class="project-link" href="../product landing page/index.html" target="_blank">Product Landing Page<br><img src="images/product landing.png" alt="Lutsenko Dolls Product Landing Page" class="thumbnail"></a>
+				</div>
+
+				<div class="project-tile">
+					<a class="project-link" href="../survey form/index.html" target="_blank">Survey Form<br><img src="images/survey.png" alt="Marvel&copy; Favorites Survey Page" class="thumbnail"></a>
+				</div>
+
+				<div class="project-tile">
+					<a class="project-link" href="../technical documentation page/index.html" target="_blank">Technical Documentation Page<br><img src="images/tech doc.png" alt="Basics of Coding Technical Documentation Page" class="thumbnail"></a>
+				</div>
+
+				<div class="project-tile">
+					<a class="project-link" href="../tribute page/index.html" target="_blank">Tribute Page<br><img src="images/tribute.png" alt="Felicia Riggs Artist Tribute Page" class="thumbnail"></a>
+				</div>
+			</div>
+		</main>
+
+		<footer id="other-links">
+			<h1 class="section-header">
+				Contact
+				<hr>
+			</h1>
+			<div id="contact-links">
+				<a class="profile-link" href="https://github.com/JaxSnow/" target="_blank"><img src="images/github.png" alt="GitHub" class="contact-icon"></a>
+				<a class="profile-link" href="https://www.linkedin.com/in/steven-riggs/" target="_blank"><img src="images/linkedin.ico" alt="LinkedIn" class="contact-icon"></a>
+				<a class="profile-link" href="mailto:JaxSnowDevelopment@gmail.com"><img src="images/gmail.png" alt="GMail" class="contact-icon"></a>
+			</div>
+		</footer>
+	</body>
+</html>

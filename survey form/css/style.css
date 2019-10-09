@@ -1,0 +1,53 @@
+body {
+    background-color: #222;
+    color: #ddd;
+}
+
+#page-content {
+    width: 375px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#title {
+    width: 100vw;
+    position: relative;
+    left: -75px;
+}
+
+#comments-area {
+    position: relative;
+    left: 50px;
+}
+
+#submit {
+    position: relative;
+    left: 95px;
+}
+
+.favorites {
+    width: 100vw;
+    position: relative;
+    left: -600px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.radio-li {
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.thumbnail {
+    width: auto;
+    height: 75px;
+}
+
+.group {
+    font-weight: 500;
+    font-style: italic;
+}

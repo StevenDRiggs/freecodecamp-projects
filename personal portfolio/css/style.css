@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Monoton&display=swap'); /* cursive */
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap'); /* monospace */
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap'); /* serif */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	--background-silver: rgb(100, 100, 100);
+	--background-silver-full-alpha: rgba(100, 100, 100, 0);
+	--background-purple: rgb(65, 11, 65);
+	--background-purple-half-alpha: rgba(65, 11, 65, 50%);
+	--background-purple-full-alpha: rgba(65, 11, 65, 0);
+	--cross-silver: black;
+	--left-ring-silver: silver;
+	--right-ring-silver: rgb(151, 151, 151);
+	--header-font-h1: 'Audiowide', cursive;
+	--header-font-h2: 'Monoton', cursive;
+	--nav-font: 'Baloo Chettan', cursive;
+}
+
+#navbar {
+	width: 100vw;
+	height: 2em;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	font-size: 1.3rem;
+	background: linear-gradient(to right, rgb(100, 100, 100), rgb(65, 11, 65));
+	font-family: 'Baloo Chettan', cursive;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	box-sizing: content-box;
+	padding: 0 10px;
+}
+
+.nav-link, .nav-link:visited {
+	text-decoration: none;
+	color: silver;
+}
+
+.nav-link:hover, #email:hover {
+	background-color: silver;
+	color: rgb(65, 11, 65);
+}
+
+#company-logo {
+	width: 100vw;
+	height: 130vh;
+	display: flex;
+	align-content: start;
+	justify-content: start;
+	position: absolute;
+	background: no-repeat url('../images/company-logo.png');
+}
+
+#logo-bg {
+	position: absolute;
+	visibility: hidden;
+}
+
+#bg-grad-final-0 {
+	stop-color: var(--background-silver-full-alpha);
+}
+
+#bg-grad-final-8 {
+	stop-color: var(--background-purple-half-alpha);
+}
+
+#bg-grad-final-100 {
+	stop-color: var(--background-purple);
+}
+
+#central-pic {
+	width: 15%;
+	height: auto;
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	font-size: 100vh;
+	visibility: hidden;
+}
+
+.binary {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 80%;
+}
+
+#cross-binary {
+	background-color: var(--background-purple);
+	fill: var(--cross-silver);
+}
+
+#rings {
+	display: block;
+	position: absolute;
+	margin: auto;
+	stroke-width: 15px;
+	fill: none;
+}
+
+#left-ring {
+	stroke: var(--left-ring-silver);
+}
+
+#left-stop-0 {
+	stop-color: var(--left-ring-silver);
+}
+
+#left-stop-20, #right-stop-0 {
+	stop-color: var(--right-ring-silver);
+}
+
+#right-ring {
+	stroke: var(--right-ring-silver);
+}
+
+#right-stop-20 {
+	stop-color: black;
+}
+
+#company-id {
+	margin-top: 9%;
+	margin-left: 22%;
+	color: silver;
+	z-index: 1;
+}
+
+#company-name {
+	font-family: 'Audiowide', cursive;
+	font-size: 4rem;
+}
+
+#company-slogan {
+	font-family: 'Monoton', cursive;
+	font-size: 2rem;
+	text-align: center;
+}
+
+#company-id > p {
+	text-align: center;
+}
+
+#email {
+	color: rgb(65, 11, 65);
+}
+
+#email:visited {
+	color: rgb(100, 100, 100);
+}
+
+main {
+	position: relative;
+	top: 45vh;
+	display: block;
+	margin-bottom: 75px;
+}
+
+.section-header {
+	text-align: center;
+	color: silver;
+}
+
+.section-header > hr {
+	width: 75%;
+	margin: auto;
+	margin-bottom: 0.5em;
+	color: rgb(151, 151, 151);
+}
+
+#self-description {
+	width: 45%;
+	margin: auto;
+	margin-bottom: 75px;
+	text-align: center;
+	color: rgb(200, 200, 200);
+	font-size: 1rem;
+}
+
+#projects {
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: end;
+}
+
+.thumbnail {
+	display: block;
+	width: 200px;
+	height: 300px;
+}
+
+.project-tile {
+	z-index: 2;
+}
+
+.project-link {
+	color: silver;
+	line-height: 1.8em;
+}
+
+.project-link:visited {
+	color: rgb(151, 151, 151);
+}
+
+#other-links {
+	position: relative;
+	top: 45vh;
+	margin-bottom: 25px;
+}
+
+#contact-links {
+	display: flex;
+	justify-content: center;
+	z-index: 3;
+}
+
+.contact-icon {
+	width: 40px;
+	height: 40px;
+}
+
+@media (max-width: 800px), (max-height: 800px) {
+	#logo-bg, #central-pic {
+		display: none;
+	}
+
+	#company-logo {
+		background: url('../images/company-logo.png');
+	}
+}
+
+@supports ((stop-color: var(--background-silver-full-alpha)) and (fill: var(--cross-silver)) and (stroke: var(--right-ring-silver))) {
+	#navbar {
+		background: linear-gradient(to right, var(--background-silver), var(--background-purple));
+		font-family: var(--nav-font);
+	}
+
+	.nav-link, .nav-link:visited {
+		color: var(--left-ring-silver);
+	}
+
+	.nav-link:hover, #email:hover {
+		background-color: var(--left-ring-silver);
+		color: var(--background-purple);
+	}
+
+	#logo-bg, #central-pic {
+		visibility: visible;
+	}
+
+	#company-logo {
+		background: none;
+	}
+
+	#company-name {
+		font-family: var(--header-font-h1);
+	}
+
+	#company-slogan {
+		font-family: var(--header-font-h2);
+	}
+
+	#email {
+		color: var(--background-purple);
+	}
+
+	#email:visited {
+		color: var(--background-silver);
+	}
+
+	.section-header {
+		color: var(--left-ring-silver);
+	}
+
+	.section-header > hr {
+		color: var(--right-ring-silver);
+	}
+
+	.project-link {
+		color: var(--left-ring-silver);
+	}
+
+	.project-link:visited {
+		color: var(--right-ring-silver);
+	}
+
+	@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+		#self-description {
+			background: linear-gradient(123deg, black 69%, rgb(151, 151, 151) 70%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<title>Marvel&copy; Cinematic Universe Survey</title>
+	</head>
+
+	<body>
+		<div id="page-content">
+			<h1 id="title">Marvel&copy; Cinematic Universe Survey</h1>
+			
+			<p id="description"><strong>A little about you:</strong></p>
+
+			<hr>
+
+			<form id="survey-form">
+				<label for="name" id="name-label">Name:</label>
+				<input type="text" id="name" name="name" placeholder="Jane Smith" required>
+
+				<br>
+
+				<label for="email" id="email-label">Email:</label>
+				<input type="email" id="email" name="email" placeholder="address@domain.ext" required>
+
+				<br>
+
+				<label for="number" id="number-label">Age:</label>
+				<input type="number" id="number" name="number" min="1" max="120" placeholder="35">
+
+				<br>
+
+				<label for="dropdown" id="dropdown-label">Gender:</label>
+				<select id="dropdown" name="dropdown">
+					<option selected disabled>Please select an option:</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+
+				<br>
+				<hr>
+				<br>
+
+				<p><strong>Who is your favorite male Marvel&copy; Cinematic Universe superhero?</strong></p>
+				<ul style="list-style: none" id="favorite-male" class="favorites">
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="ant-man"><label>Ant Man</label></span><img class="thumbnail" src="images/ant-man.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="beast"><label>Beast</label></span><img class="thumbnail" src="images/beast.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="black-panther"><label>Black Panther</label></span><img class="thumbnail" src="images/black-panther.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="captain-america"><label>Captain America</label></span><img class="thumbnail" src="images/captain-america.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="colossus"><label>Colossus</label></span><img class="thumbnail" src="images/colossus.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="cyclops"><label>Cyclops</label></span><img class="thumbnail" src="images/cyclops.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="daredevil"><label>Daredevil</label></span><img class="thumbnail" src="images/daredevil.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="deadpool"><label>Deadpool</label></span><img class="thumbnail" src="images/deadpool.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="doctor-strange"><label>Doctor Strange</label></span><img class="thumbnail" src="images/doctor-strange.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="drax"><label>Drax the Destroyer</label></span><img class="thumbnail" src="images/drax.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="falcon"><label>Falcon</label></span><img class="thumbnail" src="images/falcon.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="groot"><label>Groot</label></span><img class="thumbnail" src="images/groot.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="hawkeye"><label>Hawkeye</label></span><img class="thumbnail" src="images/hawkeye.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="hulk"><label>Hulk</label></span><img class="thumbnail" src="images/hulk.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="iron-fist"><label>Iron Fist</label></span><img class="thumbnail" src="images/iron-fist.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="iron-man"><label>Iron Man</label></span><img class="thumbnail" src="images/iron-man.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="luke-cage"><label>Luke Cage</label></span><img class="thumbnail" src="images/luke-cage.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="nick-fury"><label>Nick Fury*</label></span><img class="thumbnail" src="images/nick-fury.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="nightcrawler"><label>Nightcrawler</label></span><img class="thumbnail" src="images/nightcrawler.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="professor-x"><label>Professor X</label></span><img class="thumbnail" src="images/professor-x.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="quicksilver"><label>Quicksilver</label></span><img class="thumbnail" src="images/quicksilver.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="rocket"><label>Rocket Raccoon</label></span><img class="thumbnail" src="images/rocket.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="spider-man"><label>Spider-Man</label></span><img class="thumbnail" src="images/spider-man.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="star-lord"><label>Star-Lord</label></span><img class="thumbnail" src="images/star-lord.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="thor"><label>Thor</label></span><img class="thumbnail" src="images/thor.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="vision"><label>Vision</label></span><img class="thumbnail" src="images/vision.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="war-machine"><label>War Machine/Iron Patriot</label></span><img class="thumbnail" src="images/war-machine.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="winter-soldier"><label>Winter Soldier</label></span><img class="thumbnail" src="images/winter-soldier.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="male-superhero" value="wolverine"><label>Wolverine</label></span><img class="thumbnail" src="images/wolverine.jpg"></li>
+				</ul>
+
+				<p style="font-size: 0.8rem"><em>*Technically Nick Fury is not a superhero, but since he manages a team of superheroes, he is included here.</em></p>
+
+				<p><strong>Who is your favorite female Marvel&copy; Cinematic Universe superhero?</strong></p>
+				<ul style="list-style: none" id="favorite-female" class="favorites">
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="black-widow"><label>Black Widow</label></span><img class="thumbnail" src="images/black-widow.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="captain-marvel"><label>Captain Marvel</label></span><img class="thumbnail" src="images/captain-marvel.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="gamora"><label>Gamora</label></span><img class="thumbnail" src="images/gamora.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="jessica-jones"><label>Jessica Jones</label></span><img class="thumbnail" src="images/jessica-jones.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="mantis"><label>Mantis</label></span><img class="thumbnail" src="images/mantis.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="minn-erva"><label>Minn-Erva</label></span><img class="thumbnail" src="images/minn-erva.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="mockingbird"><label>Mockingbird</label></span><img class="thumbnail" src="images/mockingbird.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="nakia"><label>Nakia</label></span><img class="thumbnail" src="images/nakia.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="nebula"><label>Nebula</label></span><img class="thumbnail" src="images/nebula.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="negasonic"><label>Negasonic Teenage Warhead</label></span><img class="thumbnail" src="images/negasonic.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="okoye"><label>Okoye</label></span><img class="thumbnail" src="images/okoye.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="phoenix"><label>Phoenix</label></span><img class="thumbnail" src="images/phoenix.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="scarlet-witch"><label>Scarlet Witch</label></span><img class="thumbnail" src="images/scarlet-witch.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="shuri"><label>Shuri</label></span><img class="thumbnail" src="images/shuri.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="valkyrie"><label>Valkyrie</label></span><img class="thumbnail" src="images/valkyrie.jpg"></li>
+					<li class="radio-li"><span><input type="radio" name="female-superhero" value="wasp"><label>Wasp</label></span><img class="thumbnail" src="images/wasp.jpg"></li>
+				</ul>
+
+				<br>
+
+				<p><strong>Which Marvel&copy; Cinematic Universe productions have you seen?</strong></p>
+				<ul style="list-style: none" id="production-list">
+					<p class="group">Movies</p>
+					<li><input type="checkbox" name="productions-seen" value="iron-man"><label>Iron Man</label></li>
+					<li><input type="checkbox" name="productions-seen" value="the-incredible-hulk"><label>The Incredible Hulk</label></li>
+					<li><input type="checkbox" name="productions-seen" value="iron-man-2"><label>Iron Man 2</label></li>
+					<li><input type="checkbox" name="productions-seen" value="thor"><label>Thor</label></li>
+					<li><input type="checkbox" name="productions-seen" value="captain-america-1"><label>Captain America: The First Avenger</label></li>
+					<li><input type="checkbox" name="productions-seen" value="the-avengers"><label>The Avengers</label></li>
+					<li><input type="checkbox" name="productions-seen" value="iron-man-3"><label>Iron Man 3</label></li>
+					<li><input type="checkbox" name="productions-seen" value="thor-2"><label>Thor: The Dark World</label></li>
+					<li><input type="checkbox" name="productions-seen" value="captain-america-2"><label>Captain America: The Winter Soldier</label></li>
+					<li><input type="checkbox" name="productions-seen" value="guardians-of-the-galaxy"><label>Guardians of the Galaxy</label></li>
+					<li><input type="checkbox" name="productions-seen" value="x-men-1"><label>X-Men: Days of Future Past</label></li>
+					<li><input type="checkbox" name="productions-seen" value="avengers-1"><label>Avengers: Age of Ultron</label></li>
+					<li><input type="checkbox" name="productions-seen" value="ant-man"><label>Ant-Man</label></li>
+					<li><input type="checkbox" name="productions-seen" value="captain-america-3"><label>Captain America: Civil War</label></li>
+					<li><input type="checkbox" name="productions-seen" value="doctor-strange"><label>Doctor Strange</label></li>
+					<li><input type="checkbox" name="productions-seen" value="deadpool"><label>Deadpool</label></li>
+					<li><input type="checkbox" name="productions-seen" value="x-men-2"><label>X-Men: Apocalypse</label></li>
+					<li><input type="checkbox" name="productions-seen" value="guardians-of-the-galaxy-vol.-2"><label>Guardians of the Galaxy Vol. 2</label></li>
+					<li><input type="checkbox" name="productions-seen" value="spider-man-1"><label>Spider-Man: Homecoming</label></li>
+					<li><input type="checkbox" name="productions-seen" value="thor-3"><label>Thor: Ragnarok</label></li>
+					<li><input type="checkbox" name="productions-seen" value="logan"><label>Logan</label></li>
+					<li><input type="checkbox" name="productions-seen" value="black-panther"><label>Black Panther</label></li>
+					<li><input type="checkbox" name="productions-seen" value="avengers-2"><label>Avengers: Infinity War</label></li>
+					<li><input type="checkbox" name="productions-seen" value="ant-man-and-the-wasp"><label>Ant-Man and The Wasp</label></li>
+					<li><input type="checkbox" name="productions-seen" value="deadpool-2"><label>Deadpool 2</label></li>
+					<li><input type="checkbox" name="productions-seen" value="captain-marvel"><label>Captain Marvel</label></li>
+					<li><input type="checkbox" name="productions-seen" value="avengers-3"><label>Avengers: Endgame</label></li>
+					<li><input type="checkbox" name="productions-seen" value="x-men-3"><label>X-Men: Dark Phoenix</label></li>
+					<li><input type="checkbox" name="productions-seen" value="spider-man-2"><label>Spider-Man: Far From Home</label></li>
+
+					<p class="group">TV Shows</p>
+					<li><input type="checkbox" name="productions-seen" value="marvels-agent-carter"><label>Marvel's Agent Carter</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-the-defenders"><label>Marvel's The Defenders</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-inhumans"><label>Marvel's Inhumans</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels avengers"><label>Marvel's Avengers</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-daredevil"><label>Marvel's Daredevil</label></li>
+					<li><input type="checkbox" name="productions-seen" value="the-gifted"><label>The Gifted</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-guardians-of-the-galaxy"><label>Marvel's Guardians of the Galaxy</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-iron-fist"><label>Marvel's Iron Fist</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-luke-cage"><label>Marvel's Luke Cage</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvel-rising"><label>Marvel Rising</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-runaways"><label>Marvel's Runaways</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-spider-man"><label>Marvel's Spider-Man</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-cloak-and-dagger"><label>Marvel's Cloak and Dagger</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-the-punisher"><label>Marvel's The Punisher</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-agents-of-shield"><label>Marvel's Agents of S.H.I.E.L.D.</label></li>
+					<li><input type="checkbox" name="productions-seen" value="marvels-jessica-jones"><label>Marvel's Jessica Jones</label></li>
+					<li><input type="checkbox" name="productions-seen" value="legion"><label>Legion</label></li>
+				</ul>
+
+				
+				<div id="comments-area">
+					<p>Additional comments:</p>
+					<br>
+					<textarea name="comments"></textarea>
+				</div>
+
+				<br>
+				<br>
+
+				<button type="submit" id="submit">Submit</button>
+
+			</form>
+		</div>
+	</body>
+</html>
